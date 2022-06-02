@@ -25,6 +25,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
+    //This code is written by 201B50_ShikharSaxena
     SharedPreferences sharedPreferences;
     int matchCounter=0;
     int []performance={-1,-1,-1,-1,-1,-1}; //score of a game is updated in this array
@@ -83,18 +84,14 @@ public class MainActivity extends AppCompatActivity {
 
         int correctAnswer = -100;
 
-        if(operator.equals("+")) {
+        if(operator.equals("+"))
             correctAnswer = operand1 + operand2;
-        }
-        else if(operator.equals("-")) {
+        else if(operator.equals("-"))
             correctAnswer = operand1 - operand2;
-        }
-        else if(operator.equals("*")) {
+        else if(operator.equals("*"))
             correctAnswer = operand1 * operand2;
-        }
-        else {
+        else
             correctAnswer = operand1 / operand2;
-        }
 
         correctButton = random.nextInt(4);
 
@@ -122,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             button3.setText(correctAnswer + 2 + "");
             button4.setText(correctAnswer + "");
         }
+        textView2.setText(operand1 + operator + operand2);
 
         if(matchCounter==3){    // if three matches are completed update the performance in sharedpreferences
 
